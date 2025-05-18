@@ -40,10 +40,10 @@ header h1 a {
 nav {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.5rem; /* adjust for tighter spacing */
   background-color: #588157;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  padding: 1rem; /* reduced padding */
+  margin-bottom: 1rem; /* reduced margin */
 }
 
 nav a {
