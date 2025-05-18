@@ -67,9 +67,12 @@ nav a:hover {
 .featured-image img {
   max-width: 90%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* optional: rounded corners */
+  border-radius: 12px; 
+  /* optional: subtle shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
 }
+
 
 /* Main Content */
 main {
