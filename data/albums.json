@@ -7,7 +7,7 @@
     "_note": "Keywords for filtering or categorizing",
     "tags": ["obon", "featured"],
     "_note": "The thumbnail or main image to display",
-    "cover": "img1.jpg"
+    "cover": "photos/Obon 2023/Obon 2023.png"
   },
   
   {
@@ -16,7 +16,7 @@
     "_note": "The folder where images are stored",
     "folder": "photos/obon2023",
     "_note": "Keywords for filtering or categorizing",
-    "tags": ["obon", "featured"],
+    "tags": ["obon"],
     "_note": "The thumbnail or main image to display",
     "cover": "img1.jpg"
   }
