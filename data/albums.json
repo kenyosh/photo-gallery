@@ -1,14 +1,17 @@
 [
   {
-    "title": "Obon 2023",
-    "folder": "photos/obon2023",
-    "tags": ["obon", "featured"],
-    "cover": "img1.jpg"
+  "title": "Obon 2023",               // The name of the album
+  "folder": "photos/obon2023",        // The folder where images are stored
+  "tags": ["obon", "featured"],       // Keywords for filtering or categorizing
+  "cover": "img1.jpg"                 // The thumbnail or main image to display
   },
+  
   {
-    "title": "Obon 2024",
-    "folder": "photos/obon2024",
-    "tags": ["obon"],
-    "cover": "img1.jpg"
+  "title": "Obon 2023",               // The name of the album
+  "folder": "photos/obon2023",        // The folder where images are stored
+  "tags": ["obon", "featured"],       // Keywords for filtering or categorizing
+  "cover": "img1.jpg"                 // The thumbnail or main image to display
+
   }
+
 ]
