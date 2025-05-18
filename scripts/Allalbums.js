@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("data/albums.json")
     .then(response => response.json())
     .then(albums => {
-      const container = document.getElementById("Homepage-albums");
+      const container = document.getElementById("All-albums");
 
       // Filter for featured albums. Use the tool includes("____")
-      const featuredAlbums = albums.filter(album => album.tags.includes("Homepage"));
+      const featuredAlbums = albums.filter(album => album.tags.includes("All"));
 
       featuredAlbums.forEach(album => {
         const albumDiv = document.createElement("div");
