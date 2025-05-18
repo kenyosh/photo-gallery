@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const container = document.getElementById("featured-albums");
 
       // Filter for featured albums. Use the tool includes("____")
-      const featuredAlbums = albums.filter(album => album.tags.includes("featured"));
+      const featuredAlbums = albums.filter(album => album.tags.includes("Homepage"));
 
       featuredAlbums.forEach(album => {
         const albumDiv = document.createElement("div");
