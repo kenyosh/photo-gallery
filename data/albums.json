@@ -12,13 +12,13 @@
   
   {
     "_note": "The name of the album",
-    "title": "Obon 2023",
+    "title": "Japan 2024",
     "_note": "The folder where images are stored",
-    "folder": "photos/obon2023",
+    "folder": "photos/Japan2024",
     "_note": "Keywords for filtering or categorizing",
-    "tags": ["obon"],
+    "tags": ["All"],
     "_note": "The thumbnail or main image to display",
-    "cover": "img1.jpg"
+    "cover": "IMG_0133.JPG"
   }
 
 ]
