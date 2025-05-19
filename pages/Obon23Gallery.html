@@ -3,39 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--  Text in Web page header -->
-  <title>Kenzo's Collection</title> 
-  
-  <!--  Style Goes Here -->
-  <link rel="stylesheet" href="style.css" />
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
 
-  <!--  Adding Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
-  
-  <!--  This is where the code starts -->
-  <body>
+<body>
+  <h1 id="albumTitle">Gallery</h1>
+  <div class="gallery" id="galleryContainer"></div>
 
-  <!--  Web Page header Text -->
-  <header>
-    <h1><a href="index.html">Kenzo's Collection</a></h1> 
-  </header>
+  <script>
+    // Get album folder from URL
+    const params = new URLSearchParams(window.location.search);
+    const albumFolder = params.get("album");
 
-  <!--  Navigation Text -->
-  <nav>
-    <a href="Allalbums.html">All Albums</a>
-    <a href="Favorites.html">Personal Favorites</a>
-    <a href="AboutMe.html">About Me</a>
-  </nav>
+    if (!albumFolder) {
+      document.getElementById("albumTitle").textContent = "Album Not Found";
+      document.getElementById("galleryContainer").innerHTML = "<p>No album specified in URL.</p>";
+    } else {
+      const imageCount = 20; // change this to match how many images each album has
+      const container = document.getElementById("galleryContainer");
 
-  <main>
-    <p>Back</p>
+      document.getElementById("albumTitle").textContent = albumFolder.split("/").pop();
 
-    <div id="Homepage-albums" class="gallery"></div>
-
-    <!-- Added JavaScript to make a folder for each albumn -->
-    <script src="scripts/Homepage.js"></script>
-  </main>
+      for (let i = 1; i <= imageCount; i++) {
+        const img = document.createElement("img");
+        img.src = `../${albumFolder}/img${i}.jpg`;
+        img.alt = `Image ${i}`;
+        container.appendChild(img);
+      }
+    }
+  </script>
 </body>
 </html>
