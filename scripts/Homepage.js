@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const albumDiv = document.createElement("div");
         albumDiv.className = "album-preview";
         albumDiv.innerHTML = `
+          <a href="pages/Obon23Gallery.html?album=${encodeURIComponent(album.folder)}">
           <h3>${album.title}</h3>
           <img src="${album.folder}/${album.cover}" alt="${album.title}" />
         `;
@@ -21,3 +22,5 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error loading albums:", error);
     });
 });
+
+
