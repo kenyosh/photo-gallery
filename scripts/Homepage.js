@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         albumDiv.className = "album-preview";
         albumDiv.innerHTML = `
             <h3>${album.title}</h3>
-            <img src="`${album.folder}/${album.cover}" alt="${album.title}" /`>
+            <img src="${album.folder}/${album.cover}" alt="${album.title}" />
         `;
         container.appendChild(albumDiv);
       });
