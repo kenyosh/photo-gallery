@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
         albumDiv.innerHTML = `
             <h3>${album.title}</h3>
             <img src="`../${album.folder}/${album.cover}" alt="${album.title}" /`>
-          </a>
         `;
         container.appendChild(albumDiv);
       });
