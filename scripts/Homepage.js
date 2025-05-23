@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       featuredAlbums.forEach(album => {
         // Create a link that wraps the entire album preview
         const albumLink = document.createElement("a");
-        albumLink.href = `pages/gallery.html?album=${album.folder}`;
+        albumLink.href = `pages/Obon23Gallery.html?album=${album.folder}`;
         albumLink.className = "album-preview";
 
         // Add image and title inside the link
