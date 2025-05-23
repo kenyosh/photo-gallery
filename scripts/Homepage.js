@@ -4,22 +4,25 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(albums => {
       const container = document.getElementById("Homepage-albums");
 
-      // Filter for featured albums. Use the tool includes("____")
+      // Filter for featured albums
       const featuredAlbums = albums.filter(album => album.tags.includes("Homepage"));
 
       featuredAlbums.forEach(album => {
-        const albumDiv = document.createElement("div");
-        albumDiv.className = "album-preview";
-        albumDiv.innerHTML = `
-            <h3>${album.title}</h3>
-            <img src="${album.folder}/${album.cover}" alt="${album.title}" />
+        // Create a link that wraps the entire album preview
+        const albumLink = document.createElement("a");
+        albumLink.href = `pages/gallery.html?album=${album.folder}`;
+        albumLink.className = "album-preview";
+
+        // Add image and title inside the link
+        albumLink.innerHTML = `
+          <img src="${album.folder}/${album.cover}" alt="${album.title}" />
+          <h3>${album.title}</h3>
         `;
-        container.appendChild(albumDiv);
+
+        container.appendChild(albumLink);
       });
     })
     .catch(error => {
       console.error("Error loading albums:", error);
     });
 });
-
-
