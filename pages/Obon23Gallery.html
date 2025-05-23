@@ -2,43 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--  Text in Web page header -->
-  <title>Kenzo's Collection</title> 
-  
-  <!--  Style Goes Here -->
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Obon 2023 Gallery</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      font-family: "Source Sans Pro", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-  <!--  Adding Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    h1 {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+  </style>
 </head>
-  
-  <!--  This is where the code starts -->
-  <body>
+<body>
 
-  <!--  Web Page header Text -->
-  <header>
-    <h1><a href="index.html">Kenzo's Collection</a></h1> 
-  </header>
+  <h1>Obon 2023</h1>
+  <div class="gallery" id="galleryContainer"></div>
 
-  <!--  Navigation Text -->
-  <nav>
-    <a href="Allalbums.html">All Albums</a>
-    <a href="Favorites.html">Personal Favorites</a>
-    <a href="AboutMe.html">About Me</a>
-  </nav>
-
-  <main>
-    <p>Back</p>
-    <!-- Featured Image -->
-  
-    <div class="featured-image">
-      <img src="photos/Favorites/IMG_0318.JPG" alt="Featured Photo">
-    </div>
-
+  <script>
+    // Configuration
     
+    const imageFolder = "../photos/Obon 2023/";
+    const imagePrefix = "img";
+    const imageExtension = "jpg";
+    const imageCount = 20; // Update to match number of images
 
-   </main>
+    const container = document.getElementById("galleryContainer");
+
+    for (let i = 1; i <= imageCount; i++) {
+      const img = document.createElement("img");
+      img.src = `${imageFolder}${imagePrefix}${i}.${imageExtension}`;
+      img.alt = `Obon 2023 Photo ${i}`;
+      container.appendChild(img);
+    }
+  </script>
+
 </body>
 </html>
